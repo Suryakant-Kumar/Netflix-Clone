@@ -1,0 +1,734 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
+    width: 100%;
+    background-image: url(Images/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    filter: blur(10px);
+    z-index: -2;
+    background-color: rgba(14, 13, 13, 0.897);
+    background-blend-mode: overlay;
+
+}
+
+.logo-cnt {
+    width: 148px;
+    background: url(Images/Netflix.svg);
+    height: 40px;
+    background-color: rgba(14, 13, 13, 0.22);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+
+
+#lang-main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    background-color: #201c1d;
+    height: 32px;
+    width: 124px;
+    border-radius: 40px;
+    padding-left: 17px;
+    padding-right: 17px;
+    gap: 10px;
+}
+
+#nav-ctn {
+    background: linear-gradient(to bottom, black, transparent);
+}
+
+#nav-ctn-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 0 3rem;
+}
+
+#nav-part-2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+option {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    background-color: black;
+    columns: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#nav-signin-btn {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 2px solid white;
+    width: 76px;
+    height: 35px;
+    border-radius: 40px;
+}
+
+#nav-signin-btn:hover {
+    cursor: pointer;
+}
+
+#nav-signin-btn:active {
+    background-color: #acacac;
+    border-color: #acacac;
+}
+
+#lang-box {
+    width: 100px;
+    height: 24px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+#lang-logo {
+    padding-top: 5px;
+}
+
+.slider-container {
+    position: relative;
+    margin: 0 auto;
+    width: calc(100vw - 6rem);
+    height: 582px;
+    border-radius: 20px;
+}
+
+.slider-track {
+    height: 100%;
+}
+
+.slide {
+    z-index: -1;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(Images/Netflix-bg-img.jpg);
+    background-position: -2000px 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    animation: sliding 60s linear infinite;
+    z-index: -1;
+    border-radius: 20px;
+
+}
+
+.slide::after {
+    content: "";
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-1 {
+    max-width: 36rem;
+}
+
+.sub-content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sub-content-2 p {
+    font-size: 24px;
+}
+
+.sub-content-1 h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.form-sub-content-4 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 583px;
+    margin: 0 auto;
+}
+
+.sub-content-3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.form-sub-content-4 label {
+    position: absolute;
+    top: 17px;
+    left: 108px;
+}
+
+.form-input {
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+.form-input-entr {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(143, 137, 137, 0.8);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.form-input-entr::placeholder {
+    color: white;
+}
+
+.input-sub-btn {
+    flex: 1 1 150px;
+    height: 50px;
+    width: 100%;
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 1;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+.input-sub-btn:hover {
+    opacity: 0.8;
+}
+
+
+
+
+@keyframes sliding {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -2000px 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 2280px) {
+    .sub-content-1 h1 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .sub-content-1 h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+
+    .content-1 {
+        max-width: 24rem;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .sub-content-1 h1 {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    .sub-content-3 {
+        font-size: 1.40rem;
+        font-weight: 400;
+        max-width: 32rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .sub-content-1 h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .content-1 {
+        max-width: 20rem;
+    }
+
+    .sub-content-3 {
+        font-size: 1.20rem;
+        font-weight: 400;
+        max-width: 24rem;
+    }
+
+    .form-sub-content-4 {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .form-input-entr {
+        height: 50px;
+    }
+
+    .form-input {
+        flex: 1 1 50px;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+    .sub-content-1 h1 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .content-1 {
+        max-width: none;
+    }
+
+    .sub-content-2 {
+        text-align: center;
+        max-width: 12rem;
+        margin: 0 auto;
+    }
+
+    .sub-content-3 {
+        font-size: 1rem;
+        font-weight: 300;
+        max-width: fit-content;
+    }
+
+    .content-2 {
+        max-width: none;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 524px) {
+
+    #lang-box {
+        display: hidden;
+    }
+
+    #lang-main-box {
+        display: none;
+    }
+
+    .logo-cnt {
+        background: url(Images/small-logo.png);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(14, 13, 13, 0.22);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    #nav-signin-btn {
+        height: 32px;
+    }
+
+}
+
+
+.other-details {
+    width: calc(100vw - 6rem);
+    margin: 40px auto;
+}
+
+.trend {
+    width: 80%;
+    margin: auto;
+}
+
+.trend-heading {
+    color: rgba(255, 255, 255, 0.868);
+    padding-bottom: 40px;
+    font-size: 2rem;
+}
+
+.movie-slide {
+    width: 100%;
+
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 0px 0px;
+    filter: opacity(0.7);
+}
+
+.movies1 {
+    background: url(Images/Chaava.webp);
+}
+
+.movies2 {
+    background: url(Images/court.webp);
+}
+
+.movies3 {
+    background: url(Images/deva.webp);
+}
+
+.movies4 {
+    background: url(Images/pushpa.webp);
+}
+
+.movies5 {
+    background: url(Images/dragon.webp);
+}
+
+.movies6 {
+    background: url(Images/officer.webp);
+}
+
+.movies7 {
+    background: url(Images/test.webp);
+}
+
+.movies8 {
+    background: url(Images/wrestler-mania.webp);
+}
+
+.movies9 {
+    background: url(Images/Tangerines.webp);
+}
+
+.movies10 {
+    background: url(Images/Squid-games.webp);
+}
+
+.movies {
+    flex-shrink: 0;
+    width: 200px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    position: relative;
+}
+
+.digit {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0px;
+    left: -18px;
+    font-size: 6rem;
+    text-shadow: -1px -1px 0 rgb(255, 255, 255),
+        1px -1px 0 rgb(255, 255, 255),
+        -1px 1px 0 rgb(255, 255, 255),
+        1px 1px 0 rgb(255, 255, 255);
+}
+
+.movie-slide::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-slide:hover::-webkit-scrollbar {
+    display: block;
+    height: 8px;
+}
+
+.movie-slide::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.movie-slide::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.reason {
+    width: 80%;
+    margin: 50px auto;
+    color: rgba(255, 255, 255, 0.868);
+}
+
+.reason-heading {
+    padding-bottom: 40px;
+    font-size: 1.5rem;
+}
+
+.reason-slide {
+    display: flex;
+    width: 100%;
+    max-height: 200px;
+    justify-content: space-between;
+    height: fit-content;
+
+}
+
+.reason-tile {
+    width: 24%;
+    max-width: 360px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+
+}
+
+.reason-tile h3 {
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+
+.reason-tile p {
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+.query {
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ques-heading {
+    color: rgba(255, 255, 255, 0.868);
+    padding-bottom: 40px;
+    font-size: 2rem;
+}
+
+.question{
+    margin-bottom: 10px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.68, 0.06);
+    border-radius: 1rem;
+    height: 75px;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle-btn {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-content {
+    display: none;
+    padding: 15px;
+    background-color: black;
+    border: 1px solid #ccc;
+    color: rgb(255, 255, 255);
+}
+/* .toggle:hover~.toggle-content{
+    display: block;
+    position: absolute;
+    z-index: 1; 
+} */
+.toggle:checked~.toggle-content {
+    display: block;
+    position: absolute;
+    z-index: 1
+    
+}
+.toggle:checked~.toggle-btn img{
+    rotate: 45deg;
+}
+.toggle:hover~.toggle-btn img{
+    rotate: 45deg;
+}
+.sub-content-3{
+    color: white;
+}
+.end-content-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sub-content-4-end{
+    margin: 0 auto;
+    min-width: 230px;
+    /* max-width: 20%; */
+}
+.form-sub-content-end{
+    max-width: fit-content;
+}
+
+@media (max-width:3700px) {
+    .form-sub-content-4-end {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .form-input-entr-end {
+        height: 50px;
+    }
+
+    .form-input-end {
+        flex: 1 1 50px;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:1800px) {
+    .movies {
+        width: 131px;
+        height: 262px;
+    }
+}
+
+@media (max-width:1200px) {
+    .trend {
+        width: 95%;
+    }
+
+    .movies {
+        width: 128px;
+        height: 256px;
+        border-radius: 25px;
+    }
+
+    .trend-heading {
+        font-size: 1.5rem;
+    }
+
+    .movie-slide {
+        gap: 30px;
+    }
+
+    .digit {
+        font-size: 3.6rem;
+        left: -14px;
+    }
+
+    .reason {
+        width: 95%;
+    }
+}
+
+@media (max-width: 900px) {
+    .trend {
+        width: 100%;
+    }
+
+    .movies {
+        width: 104px;
+        height: 208px;
+        border-radius: 20px;
+    }
+
+    .trend-heading {
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+    }
+
+    .movie-slide {
+        gap: 20px
+    }
+
+    .digit {
+        font-size: 3.3rem;
+        left: -10px;
+    }
+
+    .reason-slide {
+        flex-direction: column;
+        max-height: none;
+        gap: 10px;
+    }
+
+    .reason-tile {
+        min-width: 100%;
+    }
+
+    .reason-tile h3 {
+        padding-bottom: 10px;
+    }
+
+}
+
+@media (max-width:600px) {
+    .digit {
+        font-size: 3rem;
+        left: -6px;
+    }
+}
